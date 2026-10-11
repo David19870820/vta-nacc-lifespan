@@ -1,0 +1,11 @@
+﻿# Core analysis
+numpy>=1.24
+pandas>=2.0
+
+# Imaging pipeline (only needed for the full pipeline, code/01-04)
+nilearn>=0.10
+nibabel>=5.0
+joblib>=1.3
+
+# Note: SciPy is deliberately NOT required.
+# code/_stats.py implements the Student-t distribution directly.

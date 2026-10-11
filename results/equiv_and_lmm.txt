@@ -1,0 +1,44 @@
+==========================================================================
+1.  EQUIVALENCE TESTING (TOST), primary age-coupling correlation
+==========================================================================
+observed r = -0.0422,  n = 307
+95% CI = [-0.153, +0.070]
+90% CI = [-0.136, +0.052]   (this is what TOST at alpha=.05 uses)
+
+  bound   one-sided p(+)   one-sided p(-)   TOST p        equivalent?
+  0.05    0.05378          0.44599          0.44599       no
+  0.08    0.01640          0.25427          0.25427       no
+  0.10    0.00646          0.15560          0.15560       no
+  0.12    0.00226          0.08602          0.08602       no
+  0.13    0.00128          0.06144          0.06144       no
+  0.14    0.00070          0.04268          0.04268       YES
+  0.15    0.00037          0.02881          0.02881       YES
+  0.20    0.00001          0.00257          0.00257       YES
+
+  -> smallest equivalence bound that is supported:  r = 0.1357
+     i.e. we can exclude |rho| >= 0.136, but NOT small effects below that.
+
+==========================================================================
+2.  BAYES FACTOR  H0: rho = 0   vs   H1: rho != 0
+==========================================================================
+  Cauchy prior scale 0.5 :  BF01 =   8.49   (BF10 = 0.118)
+  Cauchy prior scale 1.0 :  BF01 =  16.74   (BF10 = 0.060)
+  Jeffreys: BF01 3-10 = moderate evidence for H0; >10 = strong
+
+==========================================================================
+3.  LINEAR MIXED MODEL, random intercept per participant (all scans)
+==========================================================================
+  N = 304 scans,  G = 269 participants
+  sigma_u^2/sigma_e^2 (REML) = 0.0000   -> ICC = 0.000
+  sigma_e = 0.2487
+
+  fixed effects (df = G-1 = 268):
+    (intercept)  b = +0.11956   se = 0.04262   t = +2.805   p = 0.0054
+    age          b = +0.00025   se = 0.00075   t = +0.325   p = 0.7453
+    sex_M        b = +0.06987   se = 0.02988   t = +2.339   p = 0.0201
+    mean_fd      b = +0.11066   se = 0.09584   t = +1.155   p = 0.2493
+
+  age effect as partial r (for comparison with Fig. 3):  r = +0.0199
+  note: ICC = 0 means between-person variance in coupling is fully
+        absorbed by the fixed effects; the LMM then reduces to OLS
+        with cluster-robust df. Reported here for completeness.

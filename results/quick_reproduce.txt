@@ -1,0 +1,82 @@
+==========================================================================
+VTA-NAcc resting-state coupling vs age - reproduction
+==========================================================================
+
+primary (one scan per subject) : 307 subjects, 250 with mean FD
+full (all scans)               : 417 rows, 304 with mean FD
+
+--------------------------------------------------------------------------
+1. PRIMARY ANALYSIS  (n = 307, one scan per subject)
+--------------------------------------------------------------------------
+  age                            n=307 | age b=-0.00055 t=-0.738 p=0.4610
+                                        linear r=-0.0422 p=0.4610
+  age + sex                      n=307 | age b=-0.00018 t=-0.236 p=0.8135 | sex_M b=0.07330 t=2.354 p=0.0192
+                                        linear r=-0.0422 p=0.4610
+  inv_age + sex (Murty model)    n=307 | inv_age b=-0.70327 t=-0.958 p=0.3389 | sex_M b=0.08093 t=2.605 p=0.0096
+                                        linear r=-0.0422 p=0.4610
+
+  linear Pearson  r = -0.0422,  p = 0.4610,  n = 307
+
+--------------------------------------------------------------------------
+2. SENSITIVITY: excluding youngest/oldest participants
+--------------------------------------------------------------------------
+  exclude  5% each tail : n=276  age 13-74 | linear p=0.405 | inv-age p=0.756
+  exclude 10% each tail : n=248  age 16-68 | linear p=0.474 | inv-age p=0.798
+  exclude |z| > 3 SD     : n=305                | linear p=0.337 | inv-age p=0.619
+
+--------------------------------------------------------------------------
+3. HEAD-MOTION DIAGNOSTICS
+--------------------------------------------------------------------------
+  D1  r(age, mean FD)      = +0.1768,  p = 0.0051,  n = 250
+      mean FD: mean=0.298  sd=0.157  min=0.045  max=1.016
+  D2  r(mean FD, coupling) = +0.0563,  p = 0.3752,  n = 250
+  D3  age  included 40.71 (sd 19.69) | excluded 45.21 (sd 21.61) | Welch t=-1.44 p=0.153
+  D3  z    included 0.17 (sd 0.23) | excluded 0.08 (sd 0.36) | Welch t=1.78 p=0.079
+
+--------------------------------------------------------------------------
+4. AGE EFFECT WITH HEAD MOTION AS A COVARIATE
+--------------------------------------------------------------------------
+  age + sex                      n=250 | age b=-0.00004 t=-0.058 p=0.9538 | sex_M b=0.06569 t=2.141 p=0.0333
+                                        linear r=-0.0312 p=0.6238
+  age + sex + mean FD            n=250 | age b=-0.00018 t=-0.225 p=0.8224 | sex_M b=0.06489 t=2.113 p=0.0356 | mean_fd b=0.08989 t=0.938 p=0.3491
+                                        linear r=-0.0312 p=0.6238
+  inv_age + sex + mean FD        n=250 | inv_age b=-0.35435 t=-0.470 p=0.6389 | sex_M b=0.06894 t=2.253 p=0.0251 | mean_fd b=0.08207 t=0.867 p=0.3865
+                                        linear r=-0.0312 p=0.6238
+
+--------------------------------------------------------------------------
+5. EXCLUDING HIGH-MOTION PARTICIPANTS
+--------------------------------------------------------------------------
+  mean FD <= 0.2 mm : n= 68 | linear p=0.884 | age|sex p=0.417
+  mean FD <= 0.3 mm : n=148 | linear p=0.611 | age|sex p=0.324
+  mean FD <= 0.5 mm : n=231 | linear p=0.925 | age|sex p=0.603
+  mean FD <= 0.7 mm : n=242 | linear p=0.750 | age|sex p=0.874
+  mean FD <= 1.0 mm : n=249 | linear p=0.656 | age|sex p=0.975
+
+--------------------------------------------------------------------------
+6. FULL-SCAN ANALYSIS  (all 417 scans)
+--------------------------------------------------------------------------
+  n = 417 rows from 307 subjects | linear r=-0.0010 p=0.9841
+  age + sex (multiple regression) n=417 | age b=0.00040 t=0.570 p=0.5687  95% CI=[-0.00096, 0.00176]
+  inv_age + sex (Murty model)    n=417 | inv_age b=-1.13516 t=-1.830 p=0.0679 | sex_M b=0.07158 t=2.501 p=0.0128
+                                        linear r=-0.0010 p=0.9841
+
+--------------------------------------------------------------------------
+7. FULL-SCAN ANALYSIS with motion control
+--------------------------------------------------------------------------
+  n = 304 rows from 269 subjects | linear r=0.0032 p=0.9554
+  age + sex + mean FD            n=304 | age b=0.00025 t=0.325 p=0.7453 | sex_M b=0.06987 t=2.339 p=0.0200 | mean_fd b=0.11066 t=1.155 p=0.2491
+                                        linear r=0.0032 p=0.9554
+
+==========================================================================
+Coverage of this script
+==========================================================================
+Reproduced here : Sections 3.1 (counts), 3.2, 3.3, 3.4, 3.5.
+Elsewhere       :
+  3.6 equivalence testing and Bayes factor  -> code/07_equivalence_lmm.py
+  3.7 linear mixed model                    -> code/07_equivalence_lmm.py
+  3.8 preprocessed recomputation            -> code/06_preproc_sensitivity.py
+  3.8 test-retest reliability               -> code/08_reliability.py
+  3.9 ROI definition sensitivity            -> code/06_preproc_sensitivity.py
+  Figures 1-4 and forest_values.csv         -> code/09_make_figures.py
+Every number printed above was regenerated from data_derived/ in this run.
+==========================================================================

@@ -1,0 +1,74 @@
+{
+  "estimates": [
+    {
+      "n_subj": 55,
+      "n_meas": 161,
+      "k": 2.9272727272727272,
+      "msb": 0.10704581373707277,
+      "msw": 0.07682581351932799,
+      "icc": 0.1184586543826666,
+      "label": "Raw BIDS, all session pairs (any session type)",
+      "n_pairs": 182,
+      "note": "ICC uses a one-way ANOVA over subjects, k = S/G; n_pairs counts all pairwise session combinations"
+    },
+    {
+      "n_subj": 40,
+      "n_meas": 80,
+      "k": 2.0,
+      "msb": 0.07625288293371761,
+      "msw": 0.0446098437624125,
+      "icc": 0.26180974098707216,
+      "label": "Raw BIDS, BAS1-BAS2 pairs (same session type)",
+      "n_pairs": 40,
+      "r": 0.2787935540462472,
+      "p": 0.08149807535752171
+    },
+    {
+      "n_subj": 22,
+      "n_meas": 57,
+      "k": 2.590909090909091,
+      "msb": 0.06377115523066874,
+      "msw": 0.07117130695939525,
+      "icc": -0.04180918386157637,
+      "label": "LMM subset (motion-matched, >= 2 scans)",
+      "n_scans": 57
+    },
+    {
+      "n_subj": 13,
+      "n_meas": 33,
+      "k": 2.5384615384615383,
+      "msb": 0.06452960494020807,
+      "msw": 0.08285486936143602,
+      "icc": -0.09544476421554376,
+      "label": "C-PAC preprocessed coupling, >= 2 sessions",
+      "n_scans": 33
+    }
+  ],
+  "attenuation": [
+    {
+      "label": "Raw BIDS, all session pairs (any session type)",
+      "icc": 0.1184586543826666,
+      "attenuation_factor": 2.905471384433151,
+      "true_bound_from_0.136": 0.39427246686757855
+    },
+    {
+      "label": "Raw BIDS, BAS1-BAS2 pairs (same session type)",
+      "icc": 0.26180974098707216,
+      "attenuation_factor": 1.9543714039491689,
+      "true_bound_from_0.136": 0.2652081995159022
+    },
+    {
+      "label": "LMM subset (motion-matched, >= 2 scans)",
+      "icc": -0.04180918386157637,
+      "attenuation_factor": null,
+      "true_bound_from_0.136": null
+    },
+    {
+      "label": "C-PAC preprocessed coupling, >= 2 sessions",
+      "icc": -0.09544476421554376,
+      "attenuation_factor": null,
+      "true_bound_from_0.136": null
+    }
+  ],
+  "note": "observed r is attenuated by sqrt(reliability); the true bound is the observed equivalence bound divided by sqrt(ICC)"
+}

@@ -1,0 +1,23 @@
+﻿cff-version: 1.2.0
+message: "If you use this code or these derived data, please cite both the manuscript and the archived release."
+title: "VTA-NAcc resting-state coupling shows no detectable age effect across the lifespan: analysis code and derived data"
+abstract: >-
+  Analysis code and derived subject-level data for a replication of the Murty et al. (2018)
+  resting-state VTA-NAcc null finding, in 307 participants aged 9-83 from the NKI-Rockland
+  sample. Reproduces every statistic reported in the manuscript without downloading imaging data.
+type: software
+license: MIT
+authors:
+  - family-names: Hu
+    given-names: Xiaowei
+    orcid: "0009-0003-0567-192X"
+repository-code: "https://github.com/David19870820/vta-nacc-lifespan"
+keywords:
+  - resting-state fMRI
+  - functional connectivity
+  - ventral tegmental area
+  - nucleus accumbens
+  - replication
+  - null results
+  - head motion
+  - NKI-Rockland

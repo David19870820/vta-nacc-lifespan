@@ -1,0 +1,40 @@
+============================================================================
+PREPROCESSED-DATA ANALYSIS (C-PAC, full confound regression)
+============================================================================
+scans merged: 409  from 303 subjects
+columns available: c_primary, c_rad2, c_rad3, c_rad5, c_rad6, c_vta_xp, c_vta_xm, c_vta_yp, c_vta_ym, c_vta_zp, c_vta_zm, c_nacc_w
+
+primary (one scan per subject): n = 303,  with mean FD: 249
+
+----------------------------------------------------------------------------
+A. MAIN RESULT, preprocessed data (c_primary = 4mm spheres)
+----------------------------------------------------------------------------
+  linear (age only)              n=178 | age b=+0.00057 t=+0.595 p=0.5525 | linear r=+0.0448 p=0.5525
+  age + sex                      n=178 | age b=+0.00133 t=+1.390 p=0.1663 | linear r=+0.0448 p=0.5525
+  inverse-age + sex              n=178 | age b=-1.40287 t=-1.509 p=0.1331 | linear r=+0.0448 p=0.5525
+  age + sex + mean FD            n=178 | age b=+0.00122 t=+1.258 p=0.2101 | linear r=+0.0448 p=0.5525
+
+----------------------------------------------------------------------------
+B. AGREEMENT WITH THE RAW-BIDS ANALYSIS
+----------------------------------------------------------------------------
+  r(raw-BIDS coupling, preprocessed coupling) = +0.2813, p = 0.000142, n = 178
+  mean raw = +0.1862 (sd 0.2329);  mean preprocessed = +0.1461 (sd 0.2592)
+
+----------------------------------------------------------------------------
+C. ROI SENSITIVITY (age regression on each coupling definition)
+----------------------------------------------------------------------------
+  c_primary    n=178 | age b=+0.00133 t=+1.390 p=0.1663 | r=+0.0448 p=0.5525
+  c_rad2       n=175 | age b=+0.00049 t=+0.644 p=0.5207 | r=+0.0174 p=0.8188
+  c_rad3       n=177 | age b=+0.00131 t=+1.453 p=0.1482 | r=+0.0563 p=0.4567
+  c_rad5       n=180 | age b=+0.00189 t=+1.812 p=0.0717 | r=+0.0734 p=0.3277
+  c_rad6       n=180 | age b=+0.00161 t=+1.501 p=0.1353 | r=+0.0534 p=0.4766
+  c_vta_xp     n=178 | age b=+0.00142 t=+1.453 p=0.1481 | r=+0.0541 p=0.4729
+  c_vta_xm     n=178 | age b=+0.00191 t=+2.045 p=0.0424 | r=+0.0836 p=0.2672
+  c_vta_yp     n=178 | age b=+0.00156 t=+1.596 p=0.1123 | r=+0.0642 p=0.3946
+  c_vta_ym     n=178 | age b=+0.00153 t=+1.623 p=0.1065 | r=+0.0653 p=0.3864
+  c_vta_zp     n=178 | age b=+0.00084 t=+0.886 p=0.3771 | r=+0.0194 p=0.7972
+  c_vta_zm     n=177 | age b=+0.00117 t=+1.257 p=0.2105 | r=+0.0452 p=0.5505
+  c_nacc_w     n=176 | age b=+0.00152 t=+1.551 p=0.1228 | r=+0.0556 p=0.4637
+
+  -> if all p > .05 across radii 2-6 mm, seed shifts +/-2 mm, and an
+     alternative NAcc target, the null is not an artefact of ROI choice.

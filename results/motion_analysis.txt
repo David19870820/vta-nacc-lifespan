@@ -1,0 +1,41 @@
+coupling file : 417 rows / 307 subjects
+FD file       : 307 subjects
+
+PRIMARY (first scan / subject): n = 307
+  with first_mean_fd        : 250
+  n_raw_1400 == n_coupling  : 303 / 307
+
+=== D1: does head motion vary with age? ===
+  r(age, meanFD) = 0.1768, p = 0.00506, n = 250
+  meanFD: mean=0.298 sd=0.157 min=0.045 max=1.016
+  meanFD>0.5mm: n=19 (7.6%)  age 39.1 vs 40.8
+
+=== D2: does head motion relate to coupling? ===
+  r(meanFD, z) = 0.0563, p = 0.3752, n = 250
+
+=== D3: included (n=250) vs excluded (n=57) ===
+  age  incl 40.71 (sd 19.69) | excl 45.21 (sd 21.61) | Welch t=-1.44 p=0.153
+  z    incl 0.17 (sd 0.23) | excl 0.08 (sd 0.36) | Welch t=1.78 p=0.079
+  %male incl 40.8% | excl 36.8%
+
+=== REGRESSION (primary subsample with FD) ===
+  [age                       ] n=250 | age b=-0.00037 t=-0.491 p=0.6238 | lin r=-0.0312 p=0.6238
+  [age + sex                 ] n=250 | age b=-0.00004 t=-0.058 p=0.9538 | gender_code b=0.06569 t=2.141 p=0.0333 | lin r=-0.0312 p=0.6238
+  [age + sex + meanFD        ] n=250 | age b=-0.00018 t=-0.225 p=0.8224 | gender_code b=0.06489 t=2.113 p=0.0356 | first_mean_fd b=0.08989 t=0.938 p=0.3491 | lin r=-0.0312 p=0.6238
+  [inv_age + sex + meanFD    ] n=250 | inv_age b=-0.35435 t=-0.470 p=0.6389 | gender_code b=0.06894 t=2.253 p=0.0251 | first_mean_fd b=0.08207 t=0.867 p=0.3865 | lin r=-0.0312 p=0.6238
+
+=== REGRESSION without FD (full primary n=307, for comparison) ===
+  [age + sex                 ] n=307 | age b=-0.00018 t=-0.236 p=0.8135 | gender_code b=0.07330 t=2.354 p=0.0192 | lin r=-0.0422 p=0.4610
+  [inv_age + sex             ] n=307 | inv_age b=-0.70327 t=-0.958 p=0.3389 | gender_code b=0.08093 t=2.605 p=0.0096 | lin r=-0.0422 p=0.4610
+
+=== EXCLUDING HIGH-MOTION SUBJECTS ===
+  [meanFD <= 0.2             ] n= 68 | age b=0.00122 t=0.818 p=0.4166 | gender_code b=0.12165 t=2.285 p=0.0256 | lin r=0.0181 p=0.8835
+  [meanFD <= 0.3             ] n=148 | age b=0.00101 t=0.990 p=0.3236 | gender_code b=0.09002 t=2.392 p=0.0181 | lin r=0.0421 p=0.6114
+  [meanFD <= 0.5             ] n=231 | age b=0.00041 t=0.521 p=0.6028 | gender_code b=0.07327 t=2.329 p=0.0207 | lin r=0.0062 p=0.9255
+  [meanFD <= 0.7             ] n=242 | age b=0.00012 t=0.158 p=0.8744 | gender_code b=0.07692 t=2.508 p=0.0128 | lin r=-0.0206 p=0.7497
+  [meanFD <= 1.0             ] n=249 | age b=-0.00002 t=-0.031 p=0.9749 | gender_code b=0.06511 t=2.114 p=0.0355 | lin r=-0.0284 p=0.6561
+
+=== FULL-SCAN analysis (per-row FD via session order) ===
+  mappable rows: 304 / 417  (subjects 269)
+  linear r=0.0032 p=0.9554
+  [age + sex + meanFD        ] n=304 | age b=0.00025 t=0.325 p=0.7453 | gender_code b=0.06987 t=2.339 p=0.0200 | mean_fd b=0.11066 t=1.155 p=0.2491 | lin r=0.0032 p=0.9554

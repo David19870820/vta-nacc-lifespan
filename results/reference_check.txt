@@ -1,0 +1,51 @@
+=== Morales et al. 2024 — 完整作者 ===
+  n authors: 18
+    1. Morales, Angelica M.
+    2. Jones, Scott A.
+    3. Carlson, Birgitta
+    4. Kliamovich, Dakota
+    5. Dehoney, Joseph
+    6. Simpson, Brooke L.
+    7. Dominguez-Savage, Kalene A.
+    8. Hernandez, Kristina O.
+    9. Lopez, Daniel A.
+   10. Baker, Fiona C.
+   11. Clark, Duncan B.
+   12. Goldston, David B.
+   13. Luna, Beatriz
+   14. Nooner, Kate B.
+   15. Muller-Oehring, Eva M.
+   16. Tapert, Susan F.
+   17. Thompson, Wesley K.
+   18. Nagel, Bonnie J.
+  title : Associations between mesolimbic connectivity, and alcohol use from adolescence to adulthood
+  jrnl  : Developmental Cognitive Neuroscience 70, 101478
+
+=== Peterson et al. 2017 ===
+  title : The Effects of Age, from Young to Middle Adulthood, and Gender on Resting State Functional Connectivity of the Dopaminergic Midbrain
+  authors: Peterson, Andrew C.; Zhang, Sheng; Hu, Sien; Chao, Herta H.; Li, Chiang-shan R.
+  jrnl  : Frontiers in Human Neuroscience 11, article None
+
+=== 搜 Murty 2014 'Resting state networks distinguish human VTA from substantia nigra' ===
+  DOI: 10.1016/j.neuroimage.2014.06.047
+    title: Resting state networks distinguish human ventral tegmental area from substantia nigra
+    jrnl : NeuroImage 100, 580-589 (2014)
+  DOI: 10.1007/978-3-642-75846-1_4
+    title: The Human Substantia Nigra and Ventral Tegmental Area
+    jrnl : Advances in Anatomy Embryology and Cell Biology None, 32-69 (1991)
+  DOI: 10.1016/b978-0-12-374236-0.10013-6
+    title: Substantia Nigra, Ventral Tegmental Area, and Retrorubral Fields
+    jrnl : The Human Nervous System None, 439-455 (2012)
+
+=== Camacho 2020 ===
+  title : Does the child brain rest?: An examination and interpretation of resting cognition in developmental cognitive neuroscience
+  jrnl  : NeuroImage 212(None), 116688 (2020)
+
+=== Nooner 2012 ===
+  title : The NKI-Rockland Sample: A Model for Accelerating the Pace of Discovery Science in Psychiatry
+  jrnl  : Frontiers in Neuroscience 6(None), None (2012)
+
+=== Wetzels 2012 ===
+  title : A default Bayesian hypothesis test for correlations and partial correlations
+  jrnl  : Psychonomic Bulletin &amp; Review 19(6), 1057-1064 (2012)
+
